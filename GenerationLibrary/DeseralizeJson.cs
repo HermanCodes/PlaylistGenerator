@@ -1,12 +1,12 @@
-﻿using JSONUtils;
+﻿using ReportModels;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 
-namespace GenerationLibrary
+namespace ReportLibrary
 {
     public class DeseralizeJson
     {
-        public static List<ReportJson> ReadReports(string filePath) => JsonConvert.DeserializeObject<List<ReportJson>>(File.ReadAllText(filePath));
+        public static List<RootModel> ReadReports(string filePath) => JsonConvert.DeserializeObject<List<RootModel>>(File.ReadAllText(filePath));
     }
 }

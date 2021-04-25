@@ -1,4 +1,4 @@
-﻿using GenerationLibrary;
+﻿using ReportLibrary;
 
 namespace PlaylistGenerator
 {
@@ -6,7 +6,9 @@ namespace PlaylistGenerator
     {
         static void Main(string[] args)
         {
-            XmlGenerator.GeneratePlaylistFile(LocateFailedTests.GetTests("BookShop.AcceptanceTests"));
+            Report report = new Report();
+
+            XmlGenerator.GeneratePlaylistFile(report.GetTests("BookShop.AcceptanceTests"));
         }
     }
 }

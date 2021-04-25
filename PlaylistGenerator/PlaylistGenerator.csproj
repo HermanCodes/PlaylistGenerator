@@ -54,13 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GenerationLibrary\GenerationLibrary.csproj">
+    <ProjectReference Include="..\GenerationLibrary\ReportLibrary.csproj">
       <Project>{88e392ed-5b28-4c55-b681-f370eb4e9408}</Project>
-      <Name>GenerationLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JsonClassLibrary\JsonClassLibrary.csproj">
-      <Project>{267854af-9165-47f6-ba9f-09e63d73760e}</Project>
-      <Name>JsonClassLibrary</Name>
+      <Name>ReportLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

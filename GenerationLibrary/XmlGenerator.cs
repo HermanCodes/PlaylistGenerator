@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Xml;
 
-namespace GenerationLibrary
+namespace ReportLibrary
 {
     public class XmlGenerator
     {
         public static void GeneratePlaylistFile(List<string> failedTestNames)
         {
-            var fileName = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"FailedTests.Playlist");
+            var fileName = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "FailedTests.Playlist");
             using var xmlWriter = new XmlTextWriter(fileName, System.Text.Encoding.UTF8);
             xmlWriter.Formatting = Formatting.Indented;
             xmlWriter.WriteStartElement("Playlist");

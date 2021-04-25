@@ -1,0 +1,116 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "The author, the title and the price of a book can be seen, ExampleSet0, aaa",
+        "tags": [
+          {
+            "name": "WI10",
+            "line": 1
+          },
+          {
+            "name": "test1",
+            "line": 1
+          },
+          {
+            "name": "automated",
+            "line": 1
+          },
+          {
+            "name": "WI9",
+            "line": 1
+          }
+        ],
+        "steps": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "The author, the title and the price of a book can be seen, ExampleSet1, aaa",
+        "tags": [
+          {
+            "name": "WI10",
+            "line": 1
+          },
+          {
+            "name": "test2",
+            "line": 1
+          },
+          {
+            "name": "automated",
+            "line": 1
+          },
+          {
+            "name": "WI9",
+            "line": 1
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "line": 0,
+            "match": {
+              "location": "GivenTheFollowingBooks"
+            },
+            "name": "the following books",
+            "result": {
+              "duration": 1148.4897,
+              "error_message": null,
+              "status": "Passed"
+            }
+          },
+          {
+            "keyword": "When ",
+            "line": 0,
+            "match": {
+              "location": "WhenIOpenTheDetailsOfBook"
+            },
+            "name": "I open the details of 'Analysis Patterns'",
+            "result": {
+              "duration": 127.4364,
+              "error_message": null,
+              "status": "Passed"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "line": 0,
+            "match": {
+              "location": "ThenTheBookDetailsShouldShow"
+            },
+            "name": "the book details should show",
+            "result": {
+              "duration": 7.7351,
+              "error_message": null,
+              "status": "Passed"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "",
+    "keyword": "Feature",
+    "line": 3,
+    "tags": [
+      {
+        "name": "automated",
+        "line": 1
+      },
+      {
+        "name": "WI9",
+        "line": 1
+      }
+    ],
+    "name": "Book details",
+    "uri": "Features\\Book Details.feature"
+  }
+]

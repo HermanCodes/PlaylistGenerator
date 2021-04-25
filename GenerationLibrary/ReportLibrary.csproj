@@ -49,16 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeseralizeJson.cs" />
-    <Compile Include="FQN.cs" />
-    <Compile Include="LocateFailedTests.cs" />
+    <Compile Include="Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportModels\ElementsModel.cs" />
+    <Compile Include="ReportModels\MatchModel.cs" />
+    <Compile Include="ReportModels\RootModel.cs" />
+    <Compile Include="ReportModels\ResultsModel.cs" />
+    <Compile Include="ReportModels\StepsModel.cs" />
+    <Compile Include="ReportModels\TagsModel.cs" />
     <Compile Include="XmlGenerator.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JsonClassLibrary\JsonClassLibrary.csproj">
-      <Project>{267854af-9165-47f6-ba9f-09e63d73760e}</Project>
-      <Name>JsonClassLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
