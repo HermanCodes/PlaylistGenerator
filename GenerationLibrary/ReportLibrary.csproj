@@ -48,7 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeseralizeJson.cs" />
+    <Compile Include="Deseralize.cs" />
+    <Compile Include="IReport.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportModels\ElementsModel.cs" />
