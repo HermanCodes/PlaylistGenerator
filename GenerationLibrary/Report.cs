@@ -1,6 +1,5 @@
 ﻿using ReportModels;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -11,19 +10,26 @@ namespace ReportLibrary
         public const string FullyQualifiedName = "{0}.{1}.#()::TestAssembly:{2}/Feature:{3}/Scenario:{4}";
         public const string FullyQualifiedNameWithTarget = "{0}.{1}.#()::Target:{2}/TestAssembly:{3}/Feature:{4}/Scenario:{5}";
 
-        public List<string> GetTests(string projectName)
+        public List<string> GetTests(string projectName, string reportPath, string target)
         {
             Deseralize<RootModel> deseralize = new Deseralize<RootModel>();
 
             List<string> failedTests = new List<string>();
-            var reports = deseralize.ReadJson(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Report.json"));
+            var reports = deseralize.ReadJson(reportPath);
 
             reports.SelectMany(report => report.Elements)
                    .SelectMany(step => step.Steps)
                    .Where(step => step.Result.Status == "Failed");
+
+            if(target != null)
             {
                 for (int i = 0; i < reports[0].Elements.Count(); i++)
-                    failedTests.Add(GetFullyQualifiedName(projectName, reports[0].Name, reports[0].Elements[i].Name, "Integrated"));
+                    failedTests.Add(GetFullyQualifiedName(projectName, reports[0].Name, reports[0].Elements[i].Name, target));
+            }
+            else
+            {
+                for (int i = 0; i < reports[0].Elements.Count(); i++)
+                    failedTests.Add(GetFullyQualifiedName(projectName, reports[0].Name, reports[0].Elements[i].Name));
             }
 
             return failedTests;
