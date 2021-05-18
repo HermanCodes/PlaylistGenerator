@@ -1,4 +1,0 @@
-﻿<Playlist Version="1.0">
-  <Add Test="asdasd.Book details.#()::Target:Integrated/TestAssembly:asdasd/Feature:Book+details/Scenario:The+author%2c+the+title+and+the+price+of+a+book+can+be+seen%2c+ExampleSet0%2c+aaa" />
-  <Add Test="asdasd.Book details.#()::Target:Integrated/TestAssembly:asdasd/Feature:Book+details/Scenario:The+author%2c+the+title+and+the+price+of+a+book+can+be+seen%2c+ExampleSet1%2c+aaa" />
-</Playlist>
