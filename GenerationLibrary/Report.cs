@@ -37,7 +37,7 @@ namespace ReportLibrary
 
         public string GetFullyQualifiedName(string project, string feature, string scenario, string target = "")
         {
-            if (target != null)
+            if (target != "")
             {
                 return string.Format(FullyQualifiedNameWithTarget, project, feature, target, project, HttpUtility.UrlEncode(feature), HttpUtility.UrlEncode(scenario));
             }
